@@ -1,0 +1,469 @@
+/*
+Theme Name: Sakari
+URI: http://blog.adam.co
+Description: Portfolio blog
+Theme Version: 1.0 
+Author: Adam Espinet
+Author URI: http://adamsakari.com
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	width: 100%;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html {
+	overflow-y: scroll; 
+	background-color: #fff; /* e6e6e6 */
+}
+
+/*
+
+General Styles
+
+*/
+
+@font-face {
+	font-family: 'Futura';
+	src: url (/a_FuturaOrto Bold (1).ttf);
+}
+.wrap {
+	postion: relative;
+	margin: 0 auto;
+	max-width: 1140px;
+	clear: both;
+}
+#header {
+	width: 100%;
+	height: 88px;
+	background: #0088af; /*0088af 1c6e85*/
+	padding: 35px 0 0 0;
+	margin: 0 0 70px 0;
+
+}
+li {
+	float: right;
+	text-decoration: none;
+}
+li a {
+	float: right;
+	font-size: 16px;
+	font-family: 'Libre Baskerville', serif;
+	color: #fff;
+	text-decoration: none;
+	margin: 57px 0 0 94px;
+	letter-spacing: 1px;
+	padding: 7px 7px 10px 7px;
+	background-color: ;
+}
+li a:hover {
+	float: right;
+	font-size: 16px;
+	font-family: 'Libre Baskerville', serif;
+	color: #0088af;
+	text-decoration: none;
+	margin: 57px 0 0 94px;
+	letter-spacing: 1px;
+	padding: 7px 7px 10px 7px;
+	background-color: #fff;
+
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+li a:active {
+	margin: 59px 0 0 94px;
+}
+.sakari {
+	font-size: 5em;
+	color: #fff;
+	font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+  	margin: 0px 0 0 0;  /*18 0 0 0*/
+	text-decoration: none;
+	position: absolute;
+	font-weight: bold;
+}
+.photoblog {
+	float: left;
+	width: 258px;
+	margin: 29px 36px 0 0;
+	background-color: red;
+}
+.contentblog {
+	float: left;
+	width: 552px;
+	margin: 29px 36px 32px 0;
+	background-color: red;
+}
+.text {
+	width:552px;
+	margin:0 0 32px 0;
+	background-color: yellow;
+}
+.sidebarblog {
+	float: right;
+	width: 258px;
+	background-color: yellow;
+	margin: 29px 0 0 0;
+}
+
+.photomain {
+	max-width: 100%;
+	min-width: 200px;
+	height: auto;
+	float: left;
+
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'thumbnails\'><filter id=\'photomain\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>.photomain");
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+
+.photomain:hover {
+	max-width: 100%;
+	min-width: 25%;
+	height: auto;
+	float: left;
+
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'thumbnails\'><filter id=\'photomain\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>.photomain");
+    -webkit-filter: grayscale(0%);
+}
+.photomain:last-child{
+	max-width: 100%;
+	min-width: 25%;
+	height: auto;
+	float: left;
+}
+
+.photo {
+	width: 22.5%;
+	height: auto;
+	margin: 0 32px 36px 0; /* 3.07% */
+	float: left;
+}
+.photo:nth-child(4n) {
+	margin: 0 0 36px 0 !important; /* 3.07% */
+}
+img {
+	max-width: 100%;
+}
+.container {
+	width: 22.5%;
+	float: left;
+	margin: 0 3.07% 75px 0;
+}
+.container:last-child {
+	width: 22.5%;
+	float: left;
+	margin: 0 0 75px 0;
+}
+.caption {
+	margin: 25% 0 0 0;
+	float: left;
+	height: 150px;
+    width: 100%;
+}
+.caption a {
+	text-decoration: none;
+	color: #0088af;
+}
+#footer {
+	width: 100%;
+	margin:0 auto;
+	float: left;
+}
+#foot {
+	font-size: 12px;
+	font-family: 'Libre Baskerville', serif;
+}
+#contact {
+	border-top: 1px solid #999;
+	width: 100%;
+	height: 48px;
+	color: #555;
+
+	z-index: -50;
+	font-size: 12px;
+	margin: 100px 0 0 0;
+
+}
+p {
+	line-height: 24px;
+	font-size: 16px;
+	display: inline;
+}
+h1 {
+	font-size:32px;
+	margin: 0 0 32px 0;
+	color: #0088af;
+}
+h2 {
+
+}
+h3 {
+	font-size: 36px;
+	font-family: Oswald, Helvetica, Arial, sans-serif;
+	color: #0088af;
+	text-decoration: none;
+	font-weight: lighter;
+}
+h4 {
+	font-size: 16px;
+	font-family: 'Libre Baskerville', serif;
+	margin:24px 0 0 0;
+	text-decoration: none;
+	color: #0088af;
+	letter-spacing: 1px;
+}
+h5 {
+	font-size: 16px;
+	font-family: 'Libre Baskerville', serif;
+	margin:24px 0 0 0;
+	text-decoration: none;
+	letter-spacing: .01em;
+}
+
+#about {
+	max-width: 545px;
+	float:left;
+	margin: 0 0 32px 0;
+	}
+#self {
+	float:left ;
+	margin: 0 32px 32px 0;
+	height: auto;
+	max-width: 100%;
+}
+#self:nth-child(2n) {
+	margin: 0 36px 36px 0;
+}
+#self:last-child {
+	margin: 0 36px 32px 290px;
+}
+#name {
+	font-weight: bold;
+	font-size: 18px
+}
+article header h2 {
+	margin: 0 0 15px 0;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 1.3;
+	}
+article aside {
+	float: left;
+	width: 20%;
+	margin-left: -25%;
+	font-size: 12px;
+	line-height: 1.8;
+	color: #999;
+	}
+}
+
+
+/* wtf is going on with this thing? media queries only work with it */
+
+
+body::before{
+	content: "Tablet media query (768 < 979) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -99;
+}
+
+@media screen and (max-width: 1253px) and (min-width: 1100px) {
+	#about {
+		margin: 0 100px 32px 0;
+	}
+
+	body::before {
+	content: "Tablet media query (1245 < 1100) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -99;
+}
+}
+@media screen and (max-width: 1100px) and (min-width: 699px) {
+	.photo {
+		width:29.9%;
+	}
+	.photo:nth-child(4n) {
+	margin: 0 32px 36px 0 !important; /* 3.07% */
+	}
+	.photo:nth-child(3n) {
+	margin: 0 0 36px 0 !important;
+	}
+
+	#self {
+	float:left ;
+	margin: 0 32px 36px 0;
+	height: auto;
+	max-width: 100%;
+	}
+	#self:nth-child(2n) {
+		margin: 0 32px 36px 0;
+	}
+	#self:last-child {
+		margin: 0 0 0 294px;
+	}
+	#about {
+		margin: 0 50px 32px 0;
+	}
+
+
+	body::before{
+	content: "Tablet media query (1100 < 640) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -99;
+}
+}
+
+@media screen and (max-width: 699px) and (min-width: 478px) {
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 12px;
+	}
+	.photo {
+		width:46.3%;
+	}
+	.photo:nth-child(3n) {
+	margin: 0 32px 36px 0 !important; /* 3.07% */
+	}
+	.photo:nth-child(2n) {
+	margin: 0 0 36px 0 !important;
+	}
+
+	#self {
+	float:left ;
+	margin: 0 32px 36px 0;
+	height: auto;
+	max-width: 100%;
+	}
+	#self:nth-child(2n) {
+		margin: 0 0 36px 0;
+	}
+	#self:last-child {
+		margin: 0 0 0 294px;
+
+	}
+
+	body::before{
+	content: "Tablet media query (699 < 500) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -99;
+}
+}
+
+@media screen and (max-width: 478px) {
+	h3 {
+		font-size: 18px;
+	}
+	h4 {
+		font-size: 8px;
+	}
+	.photo {
+		width: 100%;
+	}
+	.photo:nth-child(2n) {
+	margin: 0 32px 36px 0 !important; /* 3.07% */
+	}
+
+	#self {
+	float:left ;
+	margin: 0 36px 32px 0;
+	height: auto;
+	max-width: 100%;
+	}
+	#self:nth-child(2n) {
+		margin: 0 36px 36px 0;
+	}
+	#self:last-child {
+		margin: 0 0 0 294px;
+
+	}
+
+
+	body::before{
+	content: "Tablet media query (500 < 0) fired";
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	background: rgba(255,255,0, 0.9); /* Semi-transparent yellow */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -99;
+}
+}
